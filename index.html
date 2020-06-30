@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <link rel="stylesheet" href="index.css" />
+    <script src="./kml/L.KML.js"></script>
+
+    <title>Test Carte Bastia</title>
+</head>
+
+<body>
+    <div>
+        <h1>Test Carte Bastia</h1>
+    </div>
+    <div id="map">
+        <div class="input">
+            <input type="text" id="inputId">
+            <ul id="autocomplete-results">
+
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        var lat = 42.039604;
+        var lon = 9.012893;
+        var macarte = null;
+        var layerGroup = null;
+        var fondCarte = 'http://{s}.tile.opentopomap.org/{z}/{x}/{y}.png';
+        var test = 0;
+        var id;
+        var markerGroup = null;
+
+
+        function showMap() {
+            macarte = L.map('map').setView([lat, lon], 8);
+            L.tileLayer(fondCarte, {
+                attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+                minZoom: 1,
+                Zoom: 5
+            }).addTo(macarte);
+            layerGroup = L.layerGroup().addTo(macarte);
+        }
+
+        function showMarker() {
+            fetch('http://localhost/Projet_Alderaan/bastia.geojson')
+                .then(res => res.json())
+                .then(geo => {
+                    markerGroup = L.geoJSON(geo, {
+                        onEachFeature: function(feature, layer) {
+                            layer.bindPopup(feature.properties.O_TO);
+                        }
+                    })
+                    markerGroup.addTo(macarte);
+                })
+        }
+
+        // Fonction d'initialisation de la carte
+        function initMap() {
+            showMap()
+            showMarker()
+        }
+
+        function createInput() {
+            let map = document.getElementById("map");
+            let div = document.createElement("div");
+            let ul = document.createElement("ul");
+            ul.id = "autocomplete-results";
+            div.className = "input";
+            let input = document.createElement("input");
+            input.id = "inputId";
+            input.setAttribute("type", "text");
+            map.appendChild(div);
+            div.appendChild(input);
+            input.appendChild(ul);
+        }
+
+        function Get(url) {
+            var HttpReq = new XMLHttpRequest();
+            HttpReq.open("GET", url, false);
+            HttpReq.send(null);
+            return HttpReq.responseText;
+        }
+
+        var jsonParsed = JSON.parse(
+            Get('http://localhost/Projet_Alderaan/bastia.geojson')
+        );
+        var places = []
+        jsonParsed.features.map(function(element, index) {
+            console.log(index);
+            places[index] = element.properties.O_TO;
+        });
+        console.log(places);
+
+
+        // variables
+        var input = document.querySelector("#inputId");
+        var results, places_to_show = [];
+        var autocomplete_results = document.getElementById("autocomplete-results");
+
+        // functions
+        function autocomplete(val) {
+            var places_returned = [];
+
+            for (i = 0; i < places.length; i++) {
+                if (val === places[i].toLowerCase().slice(0, val.length)) {
+                    places_returned.push(places[i]);
+                }
+            }
+
+            return places_returned;
+        }
+
+
+
+        function filterGeoJson(val) {
+            /* macarte.eachLayer(function(layer) {
+                 layer.remove();
+             });
+             L.tileLayer(fondCarte, {
+                 attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+                 minZoom: 1,
+                 Zoom: 5
+             }).addTo(macarte);
+             layerGroup = L.layerGroup().addTo(macarte);*/
+            macarte.removeLayer(markerGroup)
+            let filteredgeojson = {};
+            filteredgeojson.crs = jsonParsed.crs;
+            filteredgeojson.type = "FeatureCollection";
+            filteredgeojson.features = jsonParsed.features.filter(item => {
+                if (val === item.properties.O_TO.toLowerCase().slice(0, val.length)) {
+                    return item;
+                }
+            });
+            console.log(filteredgeojson);
+            markerGroup = L.geoJSON(filteredgeojson, {
+                onEachFeature: function(feature, layer) {
+                    layer.bindPopup(feature.properties.O_TO);
+                }
+            })
+            markerGroup.addTo(macarte);
+        }
+
+        // events
+        input.onkeyup = function(e) {
+            input_val = this.value.toLowerCase();
+            if (input_val.length == 0) {
+                macarte.removeLayer(markerGroup)
+                showMarker()
+            }
+            if (input_val.length > 0) {
+                autocomplete_results.innerHTML = "";
+                places_to_show = autocomplete(input_val);
+                filterGeoJson(input_val);
+                console.log(places_to_show);
+                for (i = 0; i < places_to_show.length; i++) {
+                    autocomplete_results.innerHTML +=
+                        "<li id=" +
+                        places_to_show[i] +
+                        ' class="list-item">' +
+                        places_to_show[i] +
+                        "</li>";
+                }
+                autocomplete_results.style.display = "block";
+            } else {
+                places_to_show = [];
+                autocomplete_results.innerHTML = "";
+            }
+        };
+
+        // Get the element, add a click listener...
+        document
+            .getElementById("autocomplete-results")
+            .addEventListener("click", function(e) {
+                // e.target is the clicked element!
+                // If it was a list item
+                if (e.target && e.target.nodeName == "LI") {
+                    // List item found!  Output the value!
+                    console.log(e.target.innerHTML);
+                    input.value = e.target.innerHTML;
+                    autocomplete_results.innerHTML = null; //empty the value
+                }
+            });
+        window.onload = function() {
+            // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
+            initMap();
+        };
+    </script>
+</body>
+
+</html>

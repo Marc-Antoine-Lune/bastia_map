@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="MICRO_TOPONYME_point" id="MICRO_TOPONYME_point">
+	<SimpleField name="ROWID" type="float"></SimpleField>
+	<SimpleField name="ID" type="float"></SimpleField>
+	<SimpleField name="O_TO" type="string"></SimpleField>
+	<SimpleField name="O_TO_V1" type="string"></SimpleField>
+	<SimpleField name="O_TO_V2" type="string"></SimpleField>
+	<SimpleField name="O_NE" type="string"></SimpleField>
+	<SimpleField name="O_NEE" type="string"></SimpleField>
+	<SimpleField name="O_DATE" type="string"></SimpleField>
+	<SimpleField name="O_SON" type="string"></SimpleField>
+	<SimpleField name="O_PHON" type="string"></SimpleField>
+	<SimpleField name="O_ETHN" type="string"></SimpleField>
+	<SimpleField name="OFF_TO" type="string"></SimpleField>
+	<SimpleField name="OFF_COM" type="string"></SimpleField>
+	<SimpleField name="OFF_HAM" type="string"></SimpleField>
+	<SimpleField name="OFF_INSEE" type="string"></SimpleField>
+	<SimpleField name="CR_TO" type="string"></SimpleField>
+	<SimpleField name="CR_NE" type="string"></SimpleField>
+	<SimpleField name="CR_NUM" type="string"></SimpleField>
+	<SimpleField name="CR_NUM2" type="string"></SimpleField>
+	<SimpleField name="CR_SEC" type="string"></SimpleField>
+	<SimpleField name="CR_DATE" type="string"></SimpleField>
+	<SimpleField name="CN_TO" type="string"></SimpleField>
+	<SimpleField name="CN_NE" type="string"></SimpleField>
+	<SimpleField name="CN_NUM" type="string"></SimpleField>
+	<SimpleField name="CN_SEC" type="string"></SimpleField>
+	<SimpleField name="CN_DATE" type="string"></SimpleField>
+	<SimpleField name="CN_REF" type="string"></SimpleField>
+	<SimpleField name="PT_TO" type="string"></SimpleField>
+	<SimpleField name="PT_NE" type="string"></SimpleField>
+	<SimpleField name="PT_DATE" type="string"></SimpleField>
+	<SimpleField name="PT_REF" type="string"></SimpleField>
+	<SimpleField name="AR_TO" type="string"></SimpleField>
+	<SimpleField name="AR_NE" type="string"></SimpleField>
+	<SimpleField name="AR_TYPE" type="string"></SimpleField>
+	<SimpleField name="AR_DATE" type="string"></SimpleField>
+	<SimpleField name="AR_REF" type="string"></SimpleField>
+	<SimpleField name="PU_TO" type="string"></SimpleField>
+	<SimpleField name="PU_NE" type="string"></SimpleField>
+	<SimpleField name="PU_TYPE" type="string"></SimpleField>
+	<SimpleField name="PU_DATE" type="string"></SimpleField>
+	<SimpleField name="PU_REF" type="string"></SimpleField>
+	<SimpleField name="ANA_CLAS" type="string"></SimpleField>
+	<SimpleField name="ANA_THEMG" type="string"></SimpleField>
+	<SimpleField name="ANA_THEM" type="string"></SimpleField>
+	<SimpleField name="ANA_SSTH" type="string"></SimpleField>
+	<SimpleField name="ANA_SIGN" type="string"></SimpleField>
+	<SimpleField name="ANA_LEM1" type="string"></SimpleField>
+	<SimpleField name="ANA_LEM2" type="string"></SimpleField>
+	<SimpleField name="ANA_ETHY" type="string"></SimpleField>
+	<SimpleField name="ANA_REFETY" type="string"></SimpleField>
+	<SimpleField name="ANA_DET" type="string"></SimpleField>
+	<SimpleField name="ANA_RAD" type="string"></SimpleField>
+	<SimpleField name="ANA_SUF" type="string"></SimpleField>
+	<SimpleField name="ANA_MC" type="string"></SimpleField>
+	<SimpleField name="ANA_REF" type="string"></SimpleField>
+	<SimpleField name="ANA_ETHN" type="string"></SimpleField>
+	<SimpleField name="ANA_ARCH" type="string"></SimpleField>
+	<SimpleField name="ANA_GRPER" type="string"></SimpleField>
+	<SimpleField name="ANA_OBS" type="string"></SimpleField>
+	<SimpleField name="ANA_OBS1" type="string"></SimpleField>
+	<SimpleField name="CONFI" type="string"></SimpleField>
+	<SimpleField name="HP_1" type="string"></SimpleField>
+	<SimpleField name="HP_2" type="string"></SimpleField>
+	<SimpleField name="ID_PERS" type="string"></SimpleField>
+	<SimpleField name="VALIDE" type="string"></SimpleField>
+	<SimpleField name="CLIENT" type="string"></SimpleField>
+</Schema>
+<Folder><name>MICRO_TOPONYME_point</name>
+<Placemark>
+	<ExtendedData><SchemaData schemaUrl="#MICRO_TOPONYME_point">
+		<SimpleData name="ROWID">3422</SimpleData>
+		<SimpleData name="ID">4371.000000000000000</SimpleData>
+		<SimpleData name="O_TO">Bocca ? Prunu</SimpleData>
+		<SimpleData name="O_NE">Jean Louis SANTINI</SimpleData>
+		<SimpleData name="O_NEE">Anghjulu Ghjuv? LUCCIANI</SimpleData>
+		<SimpleData name="O_DATE">2010</SimpleData>
+		<SimpleData name="O_PHON">a &amp;#946;'&amp;#596;kk 'a prunu</SimpleData>
+		<SimpleData name="OFF_COM">BASTIA</SimpleData>
+		<SimpleData name="OFF_INSEE">2B033</SimpleData>
+		<SimpleData name="ANA_CLAS">C4</SimpleData>
+		<SimpleData name="ANA_RAD">''</SimpleData>
+		<SimpleData name="ANA_SUF">''</SimpleData>
+		<SimpleData name="CONFI">Conf1</SimpleData>
+		<SimpleData name="ID_PERS">Cree par Medori Stella le $DATE</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>9.39698850800722,42.687425175905</coordinates></Point>
+  </Placemark>
+
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#MICRO_TOPONYME_point">
+		<SimpleData name="ROWID">3423</SimpleData>
+		<SimpleData name="ID">4372.000000000000000</SimpleData>
+		<SimpleData name="O_TO">a Cima di l'Urcaghja</SimpleData>
+		<SimpleData name="O_NE">Jean Louis SANTINI</SimpleData>
+		<SimpleData name="O_NEE">Anghjulu Ghjuv? LUCCIANI</SimpleData>
+		<SimpleData name="O_DATE">2010</SimpleData>
+		<SimpleData name="O_PHON">a d&amp;#658;'ima ?i l urk'a&amp;#607;a</SimpleData>
+		<SimpleData name="OFF_COM">BASTIA</SimpleData>
+		<SimpleData name="OFF_INSEE">2B033</SimpleData>
+		<SimpleData name="ANA_CLAS">C11</SimpleData>
+		<SimpleData name="ANA_SIGN">sommet</SimpleData>
+		<SimpleData name="ANA_LEM1">cima</SimpleData>
+		<SimpleData name="ANA_RAD">''</SimpleData>
+		<SimpleData name="ANA_SUF">''</SimpleData>
+		<SimpleData name="CONFI">Conf3</SimpleData>
+		<SimpleData name="ID_PERS">Cree par Medori Stella le $DATE</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>9.39622064520639,42.6849173521981</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#MICRO_TOPONYME_point">
+		<SimpleData name="ROWID">3425</SimpleData>
+		<SimpleData name="ID">4374.000000000000000</SimpleData>
+		<SimpleData name="O_TO">u Pianu Seccu</SimpleData>
+		<SimpleData name="O_NE">Jean Louis SANTINI</SimpleData>
+		<SimpleData name="O_NEE">Anghjulu Ghjuv? LUCCIANI</SimpleData>
+		<SimpleData name="O_DATE">2010</SimpleData>
+		<SimpleData name="O_PHON">u bj'anu z'?kku</SimpleData>
+		<SimpleData name="OFF_COM">PATRIMONIO</SimpleData>
+		<SimpleData name="OFF_INSEE">2B205</SimpleData>
+		<SimpleData name="ANA_CLAS">C4</SimpleData>
+		<SimpleData name="ANA_RAD">''</SimpleData>
+		<SimpleData name="ANA_SUF">''</SimpleData>
+		<SimpleData name="CONFI">Conf1</SimpleData>
+		<SimpleData name="ID_PERS">Saisi par Santini Jean-Lo</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>9.40288472358566,42.7009584681747</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#MICRO_TOPONYME_point">
+		<SimpleData name="ROWID">3426</SimpleData>
+		<SimpleData name="ID">4375.000000000000000</SimpleData>
+		<SimpleData name="O_TO">a Funtana di u Trif?gliulu</SimpleData>
+		<SimpleData name="O_NE">Jean Louis SANTINI</SimpleData>
+		<SimpleData name="O_NEE">Anghjulu Ghjuv? LUCCIANI</SimpleData>
+		<SimpleData name="O_DATE">2010</SimpleData>
+		<SimpleData name="O_PHON">a vunt'ana ??i u triv'o</SimpleData>
+		<SimpleData name="OFF_COM">BASTIA</SimpleData>
+		<SimpleData name="OFF_INSEE">2B033</SimpleData>
+		<SimpleData name="ANA_CLAS">C6</SimpleData>
+		<SimpleData name="ANA_RAD">''</SimpleData>
+		<SimpleData name="ANA_SUF">''</SimpleData>
+		<SimpleData name="CONFI">Conf1</SimpleData>
+		<SimpleData name="ID_PERS">Cree par Medori Stella le $DATE</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>9.41015578751801,42.702777280945</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#MICRO_TOPONYME_point">
+		<SimpleData name="ROWID">3427</SimpleData>
+		<SimpleData name="ID">4376.000000000000000</SimpleData>
+		<SimpleData name="O_TO">Monte Bellu</SimpleData>
+		<SimpleData name="O_NE">Jean Louis SANTINI</SimpleData>
+		<SimpleData name="O_NEE">Anghjulu Ghjuv? LUCCIANI</SimpleData>
+		<SimpleData name="O_DATE">2010</SimpleData>
+		<SimpleData name="O_PHON">m'&amp;#596;&amp;#771;nt? &amp;#946;'</SimpleData>
+		<SimpleData name="OFF_COM">BASTIA</SimpleData>
+		<SimpleData name="OFF_INSEE">2B033</SimpleData>
+		<SimpleData name="ANA_CLAS">C11</SimpleData>
+		<SimpleData name="ANA_RAD">''</SimpleData>
+		<SimpleData name="ANA_SUF">''</SimpleData>
+		<SimpleData name="CONFI">Conf1</SimpleData>
+		<SimpleData name="ID_PERS">Cree par Medori Stella le $DATE</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>9.40445070802209,42.6788907854875</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#MICRO_TOPONYME_point">
+		<SimpleData name="ROWID">3429</SimpleData>
+		<SimpleData name="ID">4378.000000000000000</SimpleData>
+		<SimpleData name="O_TO">a Funtana di u B?ia</SimpleData>
+		<SimpleData name="O_NE">Jean Louis SANTINI</SimpleData>
+		<SimpleData name="O_NEE">Anghjulu Ghjuv? LUCCIANI</SimpleData>
+		<SimpleData name="O_DATE">2010</SimpleData>
+		<SimpleData name="O_PHON">a vunt'ana ?i u w'&amp;#596;ja</SimpleData>
+		<SimpleData name="OFF_COM">BASTIA</SimpleData>
+		<SimpleData name="OFF_INSEE">2B033</SimpleData>
+		<SimpleData name="ANA_CLAS">C6</SimpleData>
+		<SimpleData name="ANA_SIGN">fontaine</SimpleData>
+		<SimpleData name="ANA_LEM1">funtana</SimpleData>
+		<SimpleData name="ANA_LEM2">boia</SimpleData>
+		<SimpleData name="ANA_RAD">''</SimpleData>
+		<SimpleData name="ANA_SUF">''</SimpleData>
+		<SimpleData name="CONFI">Conf3</SimpleData>
+		<SimpleData name="ID_PERS">Cree par Medori Stella le $DATE</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>9.39841288052,42.6798605752519</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#MICRO_TOPONYME_point">
+		<SimpleData name="ROWID">3430</SimpleData>
+		<SimpleData name="ID">4379.000000000000000</SimpleData>
+		<SimpleData name="O_TO">e Tr? Funtane</SimpleData>
+		<SimpleData name="O_NE">Jean Louis SANTINI</SimpleData>
+		<SimpleData name="O_NEE">Anghjulu Ghjuv? LUCCIANI</SimpleData>
+		<SimpleData name="O_DATE">2010</SimpleData>
+		<SimpleData name="O_PHON">&amp;#603; dr'&amp;#603; funt'an&amp;#603;</SimpleData>
+		<SimpleData name="OFF_COM">BASTIA</SimpleData>
+		<SimpleData name="OFF_INSEE">2B033</SimpleData>
+		<SimpleData name="ANA_CLAS">C7</SimpleData>
+		<SimpleData name="ANA_THEMG">Abstrait</SimpleData>
+		<SimpleData name="ANA_THEM">Nombres</SimpleData>
+		<SimpleData name="ANA_SIGN">trois</SimpleData>
+		<SimpleData name="ANA_LEM1">tr?</SimpleData>
+		<SimpleData name="ANA_LEM2">funtana</SimpleData>
+		<SimpleData name="ANA_RAD">''</SimpleData>
+		<SimpleData name="ANA_SUF">''</SimpleData>
+		<SimpleData name="CONFI">Conf1</SimpleData>
+		<SimpleData name="ID_PERS">Cree par Medori Stella le $DATE</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>9.3968122522709,42.6792914950823</coordinates></Point>
+  </Placemark>
+
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#MICRO_TOPONYME_point">
+		<SimpleData name="ROWID">3431</SimpleData>
+		<SimpleData name="ID">4380.000000000000000</SimpleData>
+		<SimpleData name="O_TO">e Calcinaghje</SimpleData>
+		<SimpleData name="O_NE">Jean Louis SANTINI</SimpleData>
+		<SimpleData name="O_NEE">ALBERTINI</SimpleData>
+		<SimpleData name="O_DATE">2010</SimpleData>
+		<SimpleData name="O_PHON">? gartt&amp;#643;in'a&amp;#607; ?</SimpleData>
+		<SimpleData name="OFF_COM">BASTIA</SimpleData>
+		<SimpleData name="OFF_INSEE">2B033</SimpleData>
+		<SimpleData name="ANA_CLAS">C3</SimpleData>
+		<SimpleData name="ANA_RAD">''</SimpleData>
+		<SimpleData name="ANA_SUF">''</SimpleData>
+		<SimpleData name="CONFI">Conf1</SimpleData>
+		<SimpleData name="ID_PERS">Cree par Medori Stella le $DATE</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>9.40083869315737,42.6761105070812</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#MICRO_TOPONYME_point">
+		<SimpleData name="ROWID">3432</SimpleData>
+		<SimpleData name="ID">4381.000000000000000</SimpleData>
+		<SimpleData name="O_TO">a Casa di Cappuri</SimpleData>
+		<SimpleData name="O_NE">Jean Louis SANTINI</SimpleData>
+		<SimpleData name="O_NEE">ALBERTINI</SimpleData>
+		<SimpleData name="O_DATE">2010</SimpleData>
+		<SimpleData name="O_PHON">a g'aza  ??i kapp'uri</SimpleData>
+		<SimpleData name="OFF_COM">BASTIA</SimpleData>
+		<SimpleData name="OFF_INSEE">2B033</SimpleData>
+		<SimpleData name="ANA_CLAS">C3</SimpleData>
+		<SimpleData name="ANA_RAD">''</SimpleData>
+		<SimpleData name="ANA_SUF">''</SimpleData>
+		<SimpleData name="CONFI">Conf1</SimpleData>
+		<SimpleData name="ID_PERS">Cree par Medori Stella le $DATE</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>9.3912072498407,42.6791187712442</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#MICRO_TOPONYME_point">
+		<SimpleData name="ROWID">3434</SimpleData>
+		<SimpleData name="ID">4383.000000000000000</SimpleData>
+		<SimpleData name="O_TO">u Paese di i Mori</SimpleData>
+		<SimpleData name="O_NE">Jean Louis SANTINI</SimpleData>
+		<SimpleData name="O_NEE">Anghjulu Ghjuv? LUCCIANI</SimpleData>
+		<SimpleData name="O_DATE">2010</SimpleData>
+		<SimpleData name="O_PHON">u ba'?z? ??i i m'&amp;#596;ri</SimpleData>
+		<SimpleData name="OFF_COM">BASTIA</SimpleData>
+		<SimpleData name="OFF_INSEE">2B033</SimpleData>
+		<SimpleData name="ANA_CLAS">C3</SimpleData>
+		<SimpleData name="ANA_RAD">''</SimpleData>
+		<SimpleData name="ANA_SUF">''</SimpleData>
+		<SimpleData name="CONFI">Conf1</SimpleData>
+		<SimpleData name="ID_PERS">Cree par Medori Stella le $DATE</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>9.40881002423127,42.6824185581081</coordinates></Point>
+  </Placemark>
+<Placemark>
+	<ExtendedData><SchemaData schemaUrl="#MICRO_TOPONYME_point">
+		<SimpleData name="ROWID">14701</SimpleData>
+		<SimpleData name="ID">13693.000000000000000</SimpleData>
+		<SimpleData name="O_TO">a Vaccaghja</SimpleData>
+		<SimpleData name="O_NE">Jean Louis SANTINI</SimpleData>
+		<SimpleData name="O_NEE">Anghjulu Ghjuv? LUCCIANI</SimpleData>
+		<SimpleData name="O_DATE">17-03-2013</SimpleData>
+		<SimpleData name="OFF_COM">BASTIA</SimpleData>
+		<SimpleData name="OFF_INSEE">2B033</SimpleData>
+		<SimpleData name="ANA_CLAS">C23</SimpleData>
+		<SimpleData name="CONFI">Conf1</SimpleData>
+		<SimpleData name="ID_PERS">Cree par Medori Stella le $DATE</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>9.44707930587392,42.6618026642297</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#MICRO_TOPONYME_point">
+		<SimpleData name="ROWID">14702</SimpleData>
+		<SimpleData name="ID">13762.000000000000000</SimpleData>
+		<SimpleData name="O_TO">e Capitelle</SimpleData>
+		<SimpleData name="O_NE">Jean Louis SANTINI</SimpleData>
+		<SimpleData name="O_NEE">Anghjulu Ghjuv? LUCCIANI</SimpleData>
+		<SimpleData name="O_DATE">17-03-2013</SimpleData>
+		<SimpleData name="OFF_COM">BASTIA</SimpleData>
+		<SimpleData name="OFF_INSEE">2B033</SimpleData>
+		<SimpleData name="ANA_CLAS">C23</SimpleData>
+		<SimpleData name="CONFI">Conf1</SimpleData>
+		<SimpleData name="ID_PERS">Cree par Medori Stella le $DATE</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>9.39581865505127,42.6818251802953</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
+
