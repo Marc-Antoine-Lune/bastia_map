@@ -20,7 +20,7 @@ function initMap() {
     }).addTo(macarte);
     layerGroup = L.layerGroup().addTo(macarte);
 
-    fetch('http://localhost/Projet_Alderaan/bastia.geojson')
+    fetch('https://marc-antoine-lune.github.io/bastia_map/bastia.geojson')
         .then(res => res.text())
         .then(kmltext => {
             const parser = new DOMParser();
