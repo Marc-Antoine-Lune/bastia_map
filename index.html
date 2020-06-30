@@ -48,7 +48,7 @@
         }
 
         function showMarker() {
-            fetch('http://localhost/Projet_Alderaan/bastia.geojson')
+            fetch('https://marc-antoine-lune.github.io/bastia_map/bastia.geojson')
                 .then(res => res.json())
                 .then(geo => {
                     markerGroup = L.geoJSON(geo, {
@@ -88,7 +88,7 @@
         }
 
         var jsonParsed = JSON.parse(
-            Get('http://localhost/Projet_Alderaan/bastia.geojson')
+            Get('https://marc-antoine-lune.github.io/bastia_map/bastia.geojson')
         );
         var places = []
         jsonParsed.features.map(function(element, index) {
