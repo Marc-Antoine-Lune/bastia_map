@@ -10,11 +10,12 @@
 }
 
 .input input {
-    border: 1px solid #000;
+    border: 1px solid white;
     padding: 5px 5px;
-    border-radius: 2px;
     background: #ffff;
     color: black;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+    border-radius: 4px;
 }
 
 #autocomplete-results {
@@ -22,20 +23,20 @@
     margin-top: -2px;
     color: black;
     z-index: 1000;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
 }
 
 #autocomplete-results li {
-    width: 100%;
     padding: 7px 15px;
-    border-right: 2px solid #eee;
     border-bottom: 2px solid #eee;
-    border-left: 2px solid #eee;
     background-color: white;
     z-index: 1000;
     margin-left: -40px;
+    list-style: none;
 }
 
 #autocomplete-results li:hover {
-    background: rgba(105, 111, 118, 0.8);
+    background: rgba(247, 248, 250, 0.8);
     ;
 }

@@ -13,9 +13,6 @@
 </head>
 
 <body>
-    <div>
-        <h1>Test Carte Bastia</h1>
-    </div>
     <div id="map">
         <div class="input">
             <input type="text" id="inputId">
@@ -119,15 +116,7 @@
 
 
         function filterGeoJson(val) {
-            /* macarte.eachLayer(function(layer) {
-                 layer.remove();
-             });
-             L.tileLayer(fondCarte, {
-                 attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
-                 minZoom: 1,
-                 Zoom: 5
-             }).addTo(macarte);
-             layerGroup = L.layerGroup().addTo(macarte);*/
+
             macarte.removeLayer(markerGroup)
             let filteredgeojson = {};
             filteredgeojson.crs = jsonParsed.crs;
@@ -147,8 +136,18 @@
         }
 
         // events
-        input.onkeyup = function(e) {
-            input_val = this.value.toLowerCase();
+
+        function handleLi() {
+            setTimeout(() => {
+                handle(), 1000
+            });
+
+        }
+
+        input.addEventListener('input', handle)
+
+        async function handle() {
+            input_val = await document.getElementById('inputId').value.toLowerCase();
             if (input_val.length == 0) {
                 macarte.removeLayer(markerGroup)
                 showMarker()
@@ -162,7 +161,7 @@
                     autocomplete_results.innerHTML +=
                         "<li id=" +
                         places_to_show[i] +
-                        ' class="list-item">' +
+                        ' class="list-item" onclick="handleLi()">' +
                         places_to_show[i] +
                         "</li>";
                 }
@@ -171,7 +170,7 @@
                 places_to_show = [];
                 autocomplete_results.innerHTML = "";
             }
-        };
+        }
 
         // Get the element, add a click listener...
         document
@@ -181,7 +180,7 @@
                 // If it was a list item
                 if (e.target && e.target.nodeName == "LI") {
                     // List item found!  Output the value!
-                    console.log(e.target.innerHTML);
+                    //console.log(e.target.innerHTML);
                     input.value = e.target.innerHTML;
                     autocomplete_results.innerHTML = null; //empty the value
                 }
